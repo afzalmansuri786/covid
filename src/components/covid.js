@@ -94,6 +94,16 @@ const Covid = () => {
             </table>
         
             </div>
+            <div id="fx">
+                    <ul>
+                        <li>StateName</li>
+                        <li>TotalRecovered</li>
+                        <li>TotalConfirmed</li>
+                        <li>TotalDeaths</li>
+                        <li>TotalActive</li>
+                        <li>LastUpdateTime</li>
+                    </ul>
+            </div>
     </>
   );
 }
