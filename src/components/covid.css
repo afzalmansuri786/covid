@@ -47,7 +47,9 @@ table{
 }
 
 
-
+#content{
+    overflow: auto;
+}
 
 tr:nth-child(1){
     font-weight: bolder;

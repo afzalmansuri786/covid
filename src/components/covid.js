@@ -3,6 +3,7 @@ import React,  { useEffect, useState } from "react";
 // import { Row } from "reactstrap";
 import "./covid.css";
 import $ from "jquery";
+import MetaTags from 'react-meta-tags';
 
 
 
@@ -124,9 +125,13 @@ const Covid = () => {
                 }
             });
         });
+
+        
+        
         // $('table').sortable({items: 'tr:not(:first)'});
 
         $('#txt_searchall').keyup(function(){
+            
             // Search Text
             var search = $(this).val();
         
@@ -140,12 +145,21 @@ const Covid = () => {
               // Searching text in columns and show match row
               $('table tbody tr:not(.notfound) td:contains("'+search+'")').each(function(){
                 $(this).closest('tr').show();
+                $('table tbody tr:nth-child(1)').show();
+                $("tr:contains('Total')").show();
+
               });
             }else{
               $('.notfound').show();
             }
         
           });
+          // Case-insensitive searching (Note - remove the below script for Case sensitive search )
+            $.expr[":"].contains = $.expr.createPseudo(function(arg) {
+                return function( elem ) {
+                return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+                };
+            });
 
         
     
@@ -159,6 +173,9 @@ const Covid = () => {
 
     <>
         {/* <meta name="viewport" content="width=device-width, initial-scale=1.0"/> */}
+        <MetaTags>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        </MetaTags>
         <section>
             <h1 className="blinker">🔴Live</h1>
             <h2>Covid-19 LiveTracker </h2>
@@ -177,7 +194,7 @@ const Covid = () => {
             
                 <tbody>
                 
-                <tr>
+                <tr id="fix">
                     {/* <img src="https://img.icons8.com/material-outlined/24/000000/sort.png"/> */}
                     <td id="nm" datatype="string">StateName</td>
                     <td id="cnf" data-type="number">Confirmed<img src="https://img.icons8.com/material-outlined/24/000000/sort.png"/></td>
@@ -191,7 +208,7 @@ const Covid = () => {
                 
                 {
                     data.map(data => (
-                    <tr>
+                    <tr id="content">
 
                         <td key={data.id}>{data.state}</td>
                         <td key={data.id}>{data.confirmed}</td>
