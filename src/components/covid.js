@@ -168,17 +168,17 @@ const Covid = () => {
             <table id="mytable">
             
                 <tbody>
-                <thead>
+                
                 <tr>
                     {/* <img src="https://img.icons8.com/material-outlined/24/000000/sort.png"/> */}
-                    <th id="nm">StateName</th>
-                    <th id="cnf" data-type="number">Confirmed<img src="https://img.icons8.com/material-outlined/24/000000/sort.png"/></th>
-                    <th id="act" data-type="number">Active<img src="https://img.icons8.com/material-outlined/24/000000/sort.png"/></th>
-                    <th id="rcv" data-type="number">Recovered<img src="https://img.icons8.com/material-outlined/24/000000/sort.png"/></th>
-                    <th id="dth" data-type="number">Deaths<img src="https://img.icons8.com/material-outlined/24/000000/sort.png"/></th>
+                    <td id="nm" datatype="string">StateName</td>
+                    <td id="cnf" data-type="number">Confirmed<img src="https://img.icons8.com/material-outlined/24/000000/sort.png"/></td>
+                    <td id="act" data-type="number">Active<img src="https://img.icons8.com/material-outlined/24/000000/sort.png"/></td>
+                    <td id="rcv" data-type="number">Recovered<img src="https://img.icons8.com/material-outlined/24/000000/sort.png"/></td>
+                    <td id="dth" data-type="number">Deaths<img src="https://img.icons8.com/material-outlined/24/000000/sort.png"/></td>
                     <th>LastUpdated</th>
                 </tr>
-                </thead>
+                
                 
                 
                 {

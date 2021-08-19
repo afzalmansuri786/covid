@@ -84,9 +84,6 @@ tr{
     border: 2px solid green;
     /* border-collapse: collapse; */
 }
-p,img{
-    display: inline-block;
-}
 
 
 
