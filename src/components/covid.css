@@ -22,7 +22,19 @@ h1,h2{
     text-align: center;
 }
 
-
+div#search{
+    width: 30rem;
+    /* background-color: black; */
+    margin: 2rem auto;
+    padding: 0;
+}
+#search input{
+    width: 30rem;
+    margin: 0;
+    outline: none;
+    padding: 1rem;
+    border-radius: 10px;
+}
 
 table{
     width: 60rem;

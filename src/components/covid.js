@@ -163,8 +163,16 @@ const Covid = () => {
             <h1 className="blinker">🔴Live</h1>
             <h2>Covid-19 LiveTracker </h2>
         </section>
+
+
+        <div id="search">
+            <input type='text' id='txt_searchall' placeholder='Enter search text'/>
+        </div>
+
+
+
         <div>
-        <input type='text' id='txt_searchall' placeholder='Enter search text'></input>
+        
             <table id="mytable">
             
                 <tbody>
@@ -184,6 +192,7 @@ const Covid = () => {
                 {
                     data.map(data => (
                     <tr>
+
                         <td key={data.id}>{data.state}</td>
                         <td key={data.id}>{data.confirmed}</td>
                         <td key={data.id}>{data.active}</td>
