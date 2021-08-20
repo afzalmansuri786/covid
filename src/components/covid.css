@@ -35,6 +35,13 @@ div#search{
     padding: 1rem;
     border-radius: 10px;
 }
+#search input:focus{
+    box-shadow: 1px 1px 5px blue;
+}
+::placeholder{
+    font-weight: bolder;
+    font-size: 14px;
+}
 
 table{
     width: 60rem;
@@ -50,6 +57,7 @@ table{
 #content{
     overflow: auto;
 }
+
 
 tr:nth-child(1){
     font-weight: bolder;
@@ -92,6 +100,7 @@ td{
     text-align: center;
     font-weight: bolder;
     border-collapse: collapse;
+    width: 5rem;
     
 }
 tr{
