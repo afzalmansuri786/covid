@@ -120,7 +120,7 @@ const Covid = () => {
 
         $(document).ready(function(){
             $('table tr').each(function(){
-                if($(this).find('td').eq(0).text() === 'State Unassigned'){
+                if($(this).find('tr').eq(0).text() == 'State Unassigned'){
                     $(this).css('display','none');
                 }
             });
@@ -137,16 +137,24 @@ const Covid = () => {
         
             // Hide all table tbody rows
             $('table tbody tr').hide();
+            
         
             // Count total search result
             var len = $('table tbody tr:not(.notfound) td:contains("'+search+'")').length;
-        
+            
             if(len > 0){
               // Searching text in columns and show match row
               $('table tbody tr:not(.notfound) td:contains("'+search+'")').each(function(){
                 $(this).closest('tr').show();
                 $('table tbody tr:nth-child(1)').show();
                 $("tr:contains('Total')").show();
+                // if ("td:contains('State Unassigned')") {
+                //     $(this).css('display','none');
+                // }
+
+                $('td:contains("State Unassigned")').closest('tr').css('display','none');
+
+                
 
               });
             }else{
