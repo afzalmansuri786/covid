@@ -1,7 +1,7 @@
 // import { cleanup } from "@testing-library/react";
 import React,  { useEffect, useState } from "react";
 // import { Row } from "reactstrap";
-import "./covid.css";
+import "../components/covid.css";
 import $ from "jquery";
 import MetaTags from 'react-meta-tags';
 
@@ -195,9 +195,7 @@ const Covid = () => {
         </div>
 
 
-        <div>
-        <iframe src="https://public.domo.com/cards/31O7r" width="900" height="600" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-        </div>
+        
         <div>
         
             <table id="mytable">
@@ -233,6 +231,10 @@ const Covid = () => {
 
             </table>
         
+            </div>
+
+            <div id="worldmap">
+                <iframe allowtransparency="true" src="https://public.domo.com/cards/31O7r" height="600" frameborder="0"></iframe>
             </div>
             {/* <div id="fx">
                     <ul>
