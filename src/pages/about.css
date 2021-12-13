@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div.about{
+    width: 60rem;
+    height: auto    ;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 3px solid saddlebrown;
+}
+#r{
+    width: 50vw;
+    /* position: absolute; */
+    /* margin: -3rem; */
+    margin-left: 35rem;
+}
+p{
+    margin: 2rem auto;
+    font-size: 20px;
+    font-family:  Calibri, sans-serif;
+}

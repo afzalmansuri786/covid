@@ -186,9 +186,8 @@ const Covid = () => {
         </MetaTags>
         <section>
             <h1 className="blinker">🔴Live</h1>
-            <h2>Covid-19 LiveTracker </h2>
+            <h2>Covid-19 Record Tracker </h2>
         </section>
-
 
         <div id="search">
             <input type='text' id='txt_searchall' placeholder='Enter search text'/>
